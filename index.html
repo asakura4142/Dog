@@ -11,42 +11,45 @@
 <body>
 																					<!-- Header -->
 	<header>
-		<div class="cointerner">
-			<div class="header-info-wrap">
-				<p class="logo">
-					Cozy House
-				</p>
-				<p class="logo-title">
-					Shelter for pets in Boston
-				</p>
-				<h1>
-					Not only people need a house
-				</h1>
-				<p class="header-subtitle"> 
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida est in porttitor  porttitor. Duis sodales elementum ipsum, vehicula condimentum erat fringilla et.
-				</p>
-				<button class="header-button"> Make a friend</button>
-			</div>
-			<div class="header-nav-wrap">
+		<div class="cointerner-pets">
+			<div class="header-nav__wrap">
+				<div class="logo-wrap">
+					<p class="logo">
+						Cozy House
+					</p>
+					<p class="logo-title">
+						Shelter for pets in Boston
+					</p>
+				</div>				
 				<nav>
-					<ul>
-						<li>
-						<a href="">About the shelter </a>		
-						</li>
-						<li>
-							<a href="">Our pets </a>
-						</li>
-						<li>
-						<a href="">To help the shelter </a>	
-						</li>
-						<li>
-						<a href="">Contacts</a>	
-						</li>
+					<ul class="nav-links">
+						<li class="li"><a href="">About the shelter </a></li>
+						<li class="li"><a href="">Our pets </a></li>
+						<li class="li"><a href="">To help the shelter </a></li>
+						<li class="li"><a href="">Contacts</a></li>
 					</ul>
+					<div class="burger">
+						<div class="line line1"></div>
+						<div class="line line2"></div>
+						<div class="line line3"></div>
+					</div>
 				</nav>
 			</div>	
-		</div>		
-		<img class="header-image" src="images/dog_header.png">
+			<div class="header-info__wrap">
+				<div class="header-text-wrap">					
+					<h1>
+						Not only people need a house
+					</h1>
+					<p class="header-subtitle"> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida est in porttitor  porttitor. Duis sodales elementum ipsum, vehicula condimentum erat fringilla et.
+					</p>
+					<button class="header-button"> Make a friend</button>
+				</div>	
+				<div class="header-image__wrapper">
+				<img class="header-image" src="images/dogHeader.png">
+			</div>
+			</div>			
+		</div>	
 	</header>
 																					<!-- About -->
 	<section class="about">
@@ -202,11 +205,12 @@
 					</div>					
 				</div>
 				<div class="footer-item">
-					<img src="images/dog_footer.png" alt="dog">
+					<img src="images/dogFooter.png" alt="dog">
 				</div>
 			</div>
 		</div>
 	</footer>																				
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
