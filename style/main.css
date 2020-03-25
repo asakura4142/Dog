@@ -484,6 +484,9 @@ footer h2{
 	.burger{
 		display: block;
 	}
+	nav{
+	z-index: 5;
+	}
 	.nav-links{
 		position: absolute;
 		right: -25px;
@@ -501,6 +504,10 @@ footer h2{
 	}
 	.nav-links li { 
 		opacity: 0;
+	}	
+	.nav-links li:last-child { 
+		opacity: 0;
+		margin-right: 40px;
 	}	
 	.nav-active{
 		transform: translateX(0%);
