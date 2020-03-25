@@ -22,8 +22,8 @@
 	font-style: normal; 
 	font-weight: normal; 
 }
-body{
-
+.wrapper{
+	overflow: hidden;
 }
 
 																					/*Header*/
@@ -44,6 +44,7 @@ header .cointerner-pets{
 	text-align: center;
 	box-sizing: border-box; 
 	height: 100%; 
+
 }
 .header-info__wrap{
 	display: flex;
@@ -88,7 +89,6 @@ h1{
 .header-button:hover{
 	background-color:#D8B8A1;
 }
-
 .header-image__wrapper{
 	max-width: 55%; 
 	position: absolute; 
@@ -119,9 +119,7 @@ h1{
 	font-weight: 400;
 	color: #ffffff;
 	margin-top: 8px;
-}
-nav{
-}																					
+}																			
 .nav-links{
 	display: flex;
 	justify-content: space-between;
@@ -156,8 +154,6 @@ nav{
 	background-color: #f1cdb3;
 	transition: all 0.4s ease;
 }
-
-
 @keyframes navLinksFade{
 	from{
 		opacity: 0;
@@ -188,7 +184,6 @@ nav{
 }
 .about__image-wrap{
 	max-width: 300px;
-	/* height: auto; */
 }
 .about__image-wrap img{
 	width: 100%;
@@ -228,21 +223,34 @@ h2{
 	margin-top: 74px;
 	margin-bottom: 66px;
 }
-.pets-wrap > button{
-	width: 50px;
+.slick-list {
+    margin: 15px;
+}
+.slick-arrow {
+	min-width: 50px;
 	height: 50px;
-	border: 2.0px solid #f1cdb3;
+	border: 2px solid #f1cdb3;
 	border-radius: 50%;
 	outline: none; 
+	font-size: 0;
+	cursor: pointer;
 }
-.prew{
+.slick-arrow:hover {
+	border: 2px solid #f1cdb3;
+	background-color: #f1cdb3;
+}
+.slick-prev {
 	background: url(../images/prew.png) no-repeat center ; 
 }
-.next{
+.slick-next {
 	background: url(../images/next.png) no-repeat center ; 
 }
-.pets-cards{
-	width: 25%;
+.slick-slide {
+	outline: none;
+	margin: 0 25px;
+	width: 270px; 
+}
+.pets-cards{	
 	height: 424px;
 	background-color: #fafafa;
 	border-radius: 9.0px;
@@ -251,33 +259,52 @@ h2{
 	padding-top: 30px;
 	border: 1px solid #D8B8A1;
 }
+.slick-current .pets-cards{
+	box-shadow: 0 2px 30px 5px rgba(13, 13, 13, 0.04);
+}
+.slick-current .pets-cards_button{
+	border: 2px solid #f1cdb3;
+	background-color: #f1cdb3;
+}
 .pets-cards-image{
-	max-height: 240px;
+	height: 240px;
 	width: auto;
+	margin: 0 auto;
 }
 .pets-cards-image img{
 	height: 100%;
 	width: auto;
+}
+.img{
+	margin: 0 auto;
+	width: 100%;
+}
+.img img{
+	width: 100%;
+	height: auto;
+}
+.top{
+	padding: 0;
+	height: 454px;
+}
+.top .pets-cards_name{
+	margin-top:60px;
 }
 .pets-cards_name{
 	font-family: Georgia;
 	font-size: 20px;
 	font-weight: 400;
 	color: #545454;
-	margin-top:20px;
+	margin-top:30px;
 }
 .pets-cards_button {
 	width: 188px;
 	height: 52px;
 	border: 2.0px solid #f1cdb3;
 	border-radius: 26.0px;
-	/* margin: 34px 41px 24px; */
 	background: #fafafa;
 	margin: 34px auto 24px;
-}
-.pets-cards_button:hover{
-	border: 2px solid #f1cdb3;
-	background-color: #f1cdb3;
+	cursor: pointer;
 }
 .cointerner-pets > button{
 	background-color: #f1cdb3;
@@ -289,6 +316,7 @@ h2{
 	color: #292929;
 	padding: 19px 44px;
 }
+
 																					/*Help*/
 .help{
 	padding: 75px;
@@ -437,7 +465,21 @@ footer h2{
 	.footer-item {
 		width: calc((100% - 100px)/3);
 	}
+	.slick-list {
+
+	}
+	.pets-cards-image img{
+		height: auto;
+		width: 100%;
+	}
 }
+@media (max-width: 1024px){
+	.pets-cards {
+		width: 270px;
+		margin: 0 auto;
+	}
+}
+
 @media (max-width: 992px){
 	.burger{
 		display: block;
@@ -495,6 +537,17 @@ footer h2{
 	.about-inner{
 		align-items: center;
 	}
+	.about-wrap {
+		max-width: 100%;
+		margin: 30px 25px;
+	}
+	.about-wrap h2 {
+		max-width: 100%;
+		text-align: center;
+	}
+	.about-subtitle {
+		margin-top: 25px;
+	}
 	.icon-card {
 		width: 30%;
 		margin-top: 78px;
@@ -526,13 +579,15 @@ footer h2{
 	.footer-item__info {
 		margin-bottom: 20px;
 	}
+	.pets-wrap {
+		margin: 56px 0 50px;
+	}
 }
 @media (max-width: 768px){
 	.about {
-		padding: 60px 0px;
+		padding: 50px 0px;
 	}	
 	.about-wrap {
-		margin: 30px 0 30px 70px;
 	}
 	h1 {
 		font-size: 35px;
@@ -576,6 +631,13 @@ footer h2{
 	}	
 	footer {
 		padding: 35px 0 20px 0;
+	}
+	.pets {
+		padding: 50px 0 50px;
+
+	}
+	.pets-wrap {
+		margin: 30px 0 30px;
 	}
 }
 @media (max-width: 576px){
@@ -648,6 +710,15 @@ footer h2{
 	}
 	.nav-links {
 		width: 80%;
+	}
+	.pets {
+		padding: 30px 0;
+	}
+	.pets-wrap {
+		margin: 20px 0;
+	}
+	.slick-list {
+		margin: 0px;
 	}
 }
 
